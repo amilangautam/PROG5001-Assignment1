@@ -38,6 +38,8 @@ public class StudentStatistics
 
          // Display the entered marks
          System.out.println("Student Marks entered Successfully!");
+         System.out.println("Assignment Name: " + assignmentName);
+         System.out.println("Students' Entered Marks are given Below:");
         
         for (int i = 0; i < 30; i++) {
             
