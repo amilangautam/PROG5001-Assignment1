@@ -16,31 +16,32 @@ public class StudentStatistics
         // Read input from the user and store in a variable
         String assignmentName = scanner.nextLine();
 
-        int[] marks = new int[5]; // 30 students Assuming
+        int[] marks = new int[30]; // 30 students Assuming
 
-        for (int i = 0; i < marks.length; i++) {
-            int mark;
+        for (int i = 0; i < 30; i++) {
             
+            int mark;
+        
             do {
-                System.out.print("Enter the student mark: ");
+                
+                System.out.print("Enter the student " + (i+1) + " mark: ");
+                
                 mark = scanner.nextInt();
 
                 if (mark < 0 || mark > 30) {
-                    System.out.println("Invalid marks! Marks should be between 0 and 30.");
+                    System.out.println("Invalid marks! Please enter the marks between 0 and 30");
                 } 
                 
-            } while (mark >= 0 && mark <= 30);
+            } while (mark < 0 || mark > 30);
             marks[i] = mark;
         }
-        
-        scanner.close();
 
-        // Display the entered marks
+         // Display the entered marks
+         System.out.println("Student Marks entered Successfully!");
         
-        
-        for (int i = 0; i < marks.length; i++) {
+        for (int i = 0; i < 30; i++) {
             
-            System.out.println(marks[i]);
+            System.out.println("Student "+ (i+1) + " Mark: " + marks[i]);
         }
     }
     
